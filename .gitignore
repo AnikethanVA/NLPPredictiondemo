@@ -1,0 +1,11 @@
+# Ignore the model file
+*.h5
+
+# Ignore the pickle file
+*.pkl
+
+# Ignore the model.png file
+model.png
+
+# Ignore logsnextword
+logsnextword/*
