@@ -29,8 +29,6 @@ def Predict_Next_Words(model, tokenizer, text):
             if value == preds:
                 predicted_word = key
                 break
-        
-        print(predicted_word)
         return predicted_word
 
 # %%
@@ -49,25 +47,11 @@ def Predict_Next_Words(model, tokenizer, text):
 # text3 = "what a strenuous"
 # text4 = "*STOP*"
 
-def Enter_Text():
-    def something():
-        while(True):
+def Enter_Text(text):
+    text = text.strip()
+    text = text.split(" ")
+    print(text)
+    text = text[-1]
 
-            text = input("Enter your line: ")
-
-            if text == "*STOP*":
-                print("Ending The Program.....")
-                break
-            
-            else:
-                try:
-                    text = text.strip()
-                    text = text.split(" ")
-                    print(text)
-                    text = text[-1]
-
-                    text = ''.join(text)
-                    Predict_Next_Words(model, tokenizer, text)
-
-                except:
-                    continue
+    text = ''.join(text)
+    return Predict_Next_Words(model, tokenizer, text)
