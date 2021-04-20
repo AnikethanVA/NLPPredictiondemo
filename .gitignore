@@ -10,4 +10,5 @@ model.png
 # Ignore logsnextword
 logsnextword/
 logsnextword1/
-__pycache__
+__pycache__/
+old/
