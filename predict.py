@@ -5,8 +5,8 @@ import pickle
 import os
 os.environ["TF_FORCE_GPU_ALLOW_GROWTH"]="true"
 
-model = load_model("nextword2.h5")
-tokenizer = pickle.load(open('tokenizer1.pkl', 'rb'))
+model = load_model("nextword.h5")
+tokenizer = pickle.load(open('tokenizer.pkl', 'rb'))
 seq_len = 3
 
 def Enter_Text(input):
